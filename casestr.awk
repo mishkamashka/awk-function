@@ -1,5 +1,5 @@
-#!/usr/bin/awk
-function case(str){
+#!/usr/bin/awk -f
+function casestr(str){
 	l = length(str);
 	k = false;
 	new_str = "";
@@ -10,8 +10,6 @@ function case(str){
 			new_str = (new_str toupper(substr(str,i,1)));
 		k = !k;
 	}
-	print new_str;
 	return new_str;
 }
-
-#BEGIN { case(ARGV[1]);}
+BEGIN {print casestr(ARGV[1]);}
