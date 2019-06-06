@@ -14,4 +14,4 @@ function case(str){
 	return new_str;
 }
 
-#BEGIN { case("dsgd");}
+#BEGIN { case(ARGV[1]);}
